@@ -32,6 +32,7 @@ export default function App() {
             <Route path="/udupi-gokarna" element={<UdupiGokarnaPage />} />
             <Route path="/varanasi-ayodhya" element={<VaranasiAyodhyaPage />} />
             <Route path="/tour-details" element={<TourDetailsPage />} />
+            <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
         <Footer />
