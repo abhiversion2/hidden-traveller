@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/hidden-traveller/static/css/main.24bb9cf0.css",
-    "main.js": "/hidden-traveller/static/js/main.64208732.js",
+    "main.js": "/hidden-traveller/static/js/main.032ff3f0.js",
     "static/js/453.02d3cde5.chunk.js": "/hidden-traveller/static/js/453.02d3cde5.chunk.js",
     "static/media/VaranasiAyodhya.jpg": "/hidden-traveller/static/media/VaranasiAyodhya.60c6af635db7453d3b41.jpg",
     "static/media/UdupiGokarna.jpg": "/hidden-traveller/static/media/UdupiGokarna.4f4f9c33290aba176c60.jpg",
     "index.html": "/hidden-traveller/index.html",
     "main.24bb9cf0.css.map": "/hidden-traveller/static/css/main.24bb9cf0.css.map",
-    "main.64208732.js.map": "/hidden-traveller/static/js/main.64208732.js.map",
+    "main.032ff3f0.js.map": "/hidden-traveller/static/js/main.032ff3f0.js.map",
     "453.02d3cde5.chunk.js.map": "/hidden-traveller/static/js/453.02d3cde5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.24bb9cf0.css",
-    "static/js/main.64208732.js"
+    "static/js/main.032ff3f0.js"
   ]
 }
