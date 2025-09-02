@@ -8,7 +8,7 @@ import ContactPage from './pages/ContactPage';
 import UdupiGokarnaPage from './pages/UdupiGokarnaPage';
 import VaranasiAyodhyaPage from './pages/VaranasiAyodhyaPage';
 import TourDetailsPage from './pages/TourDetailsPage';
-
+import PondicherryPage from './pages/PondicherryPage';
 
 // =======================================================================================
 // MAIN APP COMPONENT
@@ -31,6 +31,7 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/udupi-gokarna" element={<UdupiGokarnaPage />} />
             <Route path="/varanasi-ayodhya" element={<VaranasiAyodhyaPage />} />
+            <Route path="/pondicherry" element={<PondicherryPage />} />
             <Route path="/tour-details" element={<TourDetailsPage />} />
             <Route path="*" element={<HomePage />} />
           </Routes>

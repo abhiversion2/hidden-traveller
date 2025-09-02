@@ -4,6 +4,7 @@ import { Sun, Compass, Mountain } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
 import VaranasiAyodhyaImage from '../assets/VaranasiAyodhya.jpg';
 import UdupiGokarnaImage from '../assets/UdupiGokarna.jpg';
+import PondicherryImage from '../assets/Pondicherry.jpg';
 
 // =======================================================================================
 // HOME PAGE COMPONENT
@@ -23,6 +24,12 @@ export default function HomePage() {
       image: VaranasiAyodhyaImage,
       path: "/varanasi-ayodhya",
     },
+    {
+      title: "Pondicherry",
+      description: "A serene coastal town with French influence.",
+      image: PondicherryImage,
+      path: "/pondicherry",
+    }
   ];
 
   return (
