@@ -1,7 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 import { Sun, Compass, Mountain } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
+
+// Import carousel CSS
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+import ImageOne from '../assets/image1.jpg';
+import ImageTwo from '../assets/image2.jpg';
+import ImageThree from '../assets/image3.jpeg';
+
 import VaranasiAyodhyaImage from '../assets/VaranasiAyodhya.jpg';
 import UdupiGokarnaImage from '../assets/UdupiGokarna.jpg';
 import PondicherryImage from '../assets/Pondicherry.jpg';
@@ -11,6 +21,26 @@ import PondicherryImage from '../assets/Pondicherry.jpg';
 // The main landing page.
 // =======================================================================================
 export default function HomePage() {
+  // Data for the image carousel
+  const heroSlides = [
+    {
+      title: "Unveiling Udupi & Gokarna",
+      description: "A coastal adventure with temples, treks and backwaters.",
+      image: ImageOne,
+    },
+    {
+      title: "Discover Varanasi & Ayodhya",
+      description: "A spiritual journey to India's ancient cities.",
+      image: ImageTwo,
+    },
+    {
+      title: "Experience Serene Pondicherry",
+      description: "A serene coastal town with French influence.",
+      image: ImageThree,
+    }
+  ];
+  
+  // Data for the tour cards
   const tourCategories = [
     {
       title: "Udupi & Gokarna",
@@ -32,26 +62,46 @@ export default function HomePage() {
     }
   ];
 
+  // Settings for the carousel
+  const carouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: 'linear',
+    arrows: false,
+  };
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="h-[40vh] md:h-[50vh] flex items-center justify-center p-4 md:p-8">
-        <div className="text-center max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900">Unveiling India's Hidden Gems</h1>
-          <p className="text-lg md:text-xl font-light text-gray-600">
-            Crafting authentic and offbeat travel experiences for the modern explorer.
-          </p>
-        </div>
+      {/* Hero Carousel Section */}
+      <section className="relative">
+        <Slider {...carouselSettings}>
+          {heroSlides.map((slide, index) => (
+            <div key={index} className="relative h-[60vh] md:h-[80vh]">
+              <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div className="text-center text-white max-w-3xl p-4">
+                  <h1 className="text-4xl md:text-6xl font-extrabold mb-4">{slide.title}</h1>
+                  <p className="text-lg md:text-xl font-light">{slide.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </section>
 
-      {/* Featured Tours Section - Spacing adjusted */}
+      {/* Featured Tours Section */}
       <section className="container mx-auto p-4 md:p-8 mt-4">
         <h2 className="text-4xl font-bold text-center mb-12">Popular Adventures</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {tourCategories.map((tour, index) => (
             <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden group">
-              {/* Image container now has a 3:4 aspect ratio for vertical images */}
-              <div className="relative overflow-hidden w-full pt-[133.33%]">
+              <div className="relative overflow-hidden w-full pt-[78.7%]">
                 <img
                   src={tour.image}
                   alt={tour.title}
